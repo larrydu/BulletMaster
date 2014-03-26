@@ -1,0 +1,90 @@
+package bulletmaster;
+
+public class Enemy {
+
+	private int maxHealth, currentHealth, attackPower;
+	private int centerX, centerY, speedX, speedY;
+	private Background bg = StartingClass.getBg1();
+	
+	//Behavioral methods
+	
+	public void update(){
+		centerX += speedX;
+		speedX = bg.getSpeedX();
+	}
+	
+	public void die(){
+	}
+	
+	public void attack(){
+	}
+
+	public int getMaxHealth() {
+		return maxHealth;
+	}
+
+	public int getCurrentHealth() {
+		return currentHealth;
+	}
+
+	public int getAttackPower() {
+		return attackPower;
+	}
+
+	public int getCenterX() {
+		return centerX;
+	}
+
+	public int getCenterY() {
+		return centerY;
+	}
+
+	public int getSpeedX() {
+		return speedX;
+	}
+
+	public int getSpeedY() {
+		return speedY;
+	}
+
+	public Background getBg() {
+		return bg;
+	}
+
+	public void setMaxHealth(int maxHealth) {
+		this.maxHealth = maxHealth;
+	}
+
+	public void setCurrentHealth(int currentHealth) {
+		this.currentHealth = currentHealth;
+	}
+
+	public void setAttackPower(int attackPower) {
+		this.attackPower = attackPower;
+	}
+
+	public void setCenterX(int centerX) {
+		this.centerX = centerX;
+	}
+
+	public void setCenterY(int centerY) {
+		this.centerY = centerY;
+	}
+
+	public void setSpeedX(int speedX) {
+		this.speedX = speedX;
+	}
+
+	public void setSpeedY(int speedY) {
+		this.speedY = speedY;
+	}
+
+	public void setBg(Background bg) {
+		this.bg = bg;
+	}
+	
+		
+}
+
+
+

@@ -1,0 +1,14 @@
+package bulletmaster;
+
+public class Hornworm extends Enemy {
+
+	public Hornworm() {    
+		
+		public Hornworm() {
+			setCenterX(centerX);
+			setCenterY(centerY);
+		}
+		
+
+	}
+}

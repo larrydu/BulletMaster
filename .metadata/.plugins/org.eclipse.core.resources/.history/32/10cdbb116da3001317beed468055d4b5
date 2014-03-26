@@ -1,0 +1,17 @@
+package bulletmaster;
+
+public class Hero {
+	private int centerX = 100;
+	private int centerY = 382;
+	private boolean jumped = false;
+	
+	private int speedX = 0;
+	private int speedY = 1;
+	
+	public void update(){
+			
+
+
+	}
+
+}

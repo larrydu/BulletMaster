@@ -1,0 +1,11 @@
+package BulletMaster;
+import bulletmaster.Enemy;
+
+
+public class Hornworm extends Enemy {
+
+	public Hornworm() {
+		
+	}
+
+}

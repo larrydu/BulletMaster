@@ -1,0 +1,13 @@
+package bulletmaster;
+
+public class Hornworm extends Enemy {
+
+	public Hornworm() {    
+		
+		public Hornworm(int centerX, int centerY) {
+			setCenterX(centerX);
+			setCenterY(centerY);
+		}
+		
+
+}

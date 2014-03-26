@@ -1,0 +1,23 @@
+package bulletmaster;
+
+public class Enemy {
+
+	private int maxHealth, currentHealth, attackPower;
+	private int centerX, centerY, speedX, speedY;
+	private Background bg = StartingClass.getBg1();
+	
+	//Behavioral methods
+	
+	public void update(){
+		centerX += speedX;
+		speedX = bg.getSpeedX();
+	}
+	
+	public void die(){
+	}
+	
+	public void attack(){
+	}
+	
+		
+}

@@ -1,0 +1,16 @@
+package bulletmaster;
+
+
+import java.applet.Applet;
+import java.awt.Graphics;
+
+package 
+public class StartingClass extends Applet {
+
+
+    //Note that init(),start(),stop(), and destroy are methods
+    //inherited from Applet
+
+	
+
+}

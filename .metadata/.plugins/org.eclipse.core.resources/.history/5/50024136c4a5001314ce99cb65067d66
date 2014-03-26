@@ -1,0 +1,10 @@
+import bulletmaster.Enemy;
+
+
+public class Hornworm extends Enemy {
+
+	public Hornworm() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

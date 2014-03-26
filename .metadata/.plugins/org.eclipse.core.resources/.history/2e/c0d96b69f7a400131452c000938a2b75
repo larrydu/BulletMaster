@@ -1,0 +1,185 @@
+package bulletmaster;
+
+
+import java.applet.Applet;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Color;
+import java.awt.Frame;
+import java.net.URL;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+public class StartingClass extends Applet implements Runnable, KeyListener{
+
+	//Make a hero 
+	private Hero bulletMonk;
+	private Image image, character;
+	private URL base;
+	private Graphics second;
+
+	//Note that init(),start(),stop(), and destroy are methods
+	//inherited from Applet
+
+	@Override
+	public void init() {
+
+		/*Initializing*/
+		//System.out.println("Initializing!\n");
+
+		/*Set screen size*/
+		setSize(800,480);
+		/*Set background*/
+		setBackground(Color.BLACK);
+		setFocusable(true);
+		addKeyListener(this);
+		/*Assign the applet window to the frame*/
+		Frame frame = (Frame) this.getParent().getParent();
+		frame.setTitle("Bullet Master");
+		try{
+			base = getCodeBase();
+	
+		}catch (Exception e){
+			//TODO: handle exception
+		}
+
+		//Image setups
+		character = getImage(base,"../img/32x64_black.png");
+
+
+
+	}
+
+	@Override
+	public void start() {
+		bulletMonk = new Hero(); //initialize bulletMonk hero
+		Thread thread = new Thread(this);
+		thread.start();
+	}
+
+	
+	
+	
+	
+	@Override
+	public void stop() {
+		// TODO Auto-generated method stub
+	
+	}
+
+	
+	
+	
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
+
+
+	@Override
+	public void run() {
+
+		while (true) {
+			bulletMonk.update();
+			repaint();
+			try{
+				Thread.sleep(17);
+			} catch (InterruptedException e){
+				e.printStackTrace();
+			}
+		}//while loop end
+	}
+
+	
+	//Update graphics with double buffering system
+	@Override
+	public void update(Graphics g) {
+		if (image == null) {
+			image = createImage(this.getWidth(), this.getHeight());
+			second = image.getGraphics();
+		}
+
+		second.setColor(getBackground());
+		second.fillRect(0, 0, getWidth(), getHeight());
+		second.setColor(getForeground());
+		paint(second);
+		g.drawImage(image, 0, 0, this);
+
+	}
+
+	@Override
+	public void paint(Graphics g) {
+		g.drawImage(character,bulletMonk.getCenterX()-61,bulletMonk.getCenterY()-63,this);
+
+	} 
+	
+
+	//Handle input
+	@Override
+	public void keyPressed(KeyEvent e) {
+		switch (e.getKeyCode()) {
+		case KeyEvent.VK_UP:
+			System.out.println("Move up");	
+			break;
+
+		case KeyEvent.VK_DOWN:
+			System.out.println("Move down");
+			break;
+
+		case KeyEvent.VK_LEFT:
+			System.out.println("Move left");
+			bulletMonk.moveLeft();
+			break;
+
+		case KeyEvent.VK_RIGHT:
+			System.out.println("Move right");
+			bulletMonk.moveRight();
+			break;
+
+		case KeyEvent.VK_SPACE:
+			System.out.println("Jump");
+			bulletMonk.moveJump();
+			break;
+		}	
+
+	}
+
+	public void keyReleased(KeyEvent e) {
+
+		switch (e.getKeyCode()) {
+		case KeyEvent.VK_UP:
+			System.out.println("Stop moving up");
+			break;
+
+		case KeyEvent.VK_DOWN:
+			System.out.println("Stop moving down");
+			break;
+
+		case KeyEvent.VK_LEFT:
+			bulletMonk.moveStop();
+			System.out.println("Stop moving left");
+			break;
+
+		case KeyEvent.VK_RIGHT:
+			bulletMonk.moveStop();
+			System.out.println("Stop moving right");
+			break;
+
+		case KeyEvent.VK_SPACE:
+			System.out.println("Stop jumping");
+			break;
+
+		}	    
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+
+
+
+}
