@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="10" height="8" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="prototile_rocks" tilewidth="32" tileheight="32">
+  <image source="../prototile_rocks.png" width="320" height="256"/>
+ </tileset>
+ <tileset firstgid="81" name="prototile_rocks" tilewidth="32" tileheight="32">
+  <image source="../prototile_rocks.png" width="320" height="256"/>
+ </tileset>
+ <tileset firstgid="161" name="proto" tilewidth="64" tileheight="64">
+  <image source="../proto.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="162" name="protocrouch" tilewidth="64" tileheight="64">
+  <image source="../protocrouch.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="163" name="prototile" tilewidth="32" tileheight="32">
+  <image source="../prototile.png" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="463" name="prototile" tilewidth="32" tileheight="32">
+  <image source="../prototile.png" width="640" height="480"/>
+ </tileset>
+ <layer name="Tree trunks" width="10" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAfuCKxramszhWnKuLV0QMAAJHPAhU=
+  </data>
+ </layer>
+ <layer name="Tree Line" width="10" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYEAFdUBcD8QNaGx00AHEnUDchcamBVhII3OpAQD+RgbS
+  </data>
+ </layer>
+ <layer name="Tile Layer 6" width="10" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYMAPvgDxVwJqQICDkYGBk5GwOhmgGlki1OECi8jXShMAAMB+Ato=
+  </data>
+ </layer>
+ <layer name="Art assets" width="10" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYIAAF0YGBlcgdgNid0YGnCACKBcJxFFAHA3EnLiVwsFUItTgAlxobC4k9j4sarCByxTYTwgAAB0sBOY=
+  </data>
+ </layer>
+ <layer name="Solid layer" width="10" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAeBAFxMBCHAHEoFIcBcTiauhggjgXiOCCOh+IEIE5EU5cGxOlAnAHEmVCcBcTZSGrY8GAhJDYfEPMj0cj4PyNCXBUPVgNiJRxYGY2vAqUB4zQMUw==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="10" height="8">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFlAAAAUAAAQ==
+  </data>
+ </layer>
+</map>
